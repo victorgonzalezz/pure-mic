@@ -1,5 +1,5 @@
 export function TipoDeEmpresa() {
   return (
-    <h1 style={{ backgroundColor: "blue" }}>Tipo de Empresa</h1>
+    <h1>Tipo de Empresa</h1>
   )
 }
