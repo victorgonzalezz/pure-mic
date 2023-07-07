@@ -20,6 +20,8 @@
 }
 
 .button {
+  position: relative;
+
   padding: 10px 20px;
   margin: 0 5px;
   font-size: 16px;
@@ -28,10 +30,21 @@
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s;
-  position: relative;
   border-radius: 50%;
   width: 45px;
   height: 45px;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  width: 2px;
+  height: 71px;
+  background-color: #ddd;
+  ;
+  transform: rotate(90deg);
+  right: -36px;
 }
 
 .button-text {
@@ -41,13 +54,6 @@
   font-weight: 600;
 }
 
-.line {
-  width: 20px;
-  height: 1px;
-  background-color: #333;
-  margin: 0 auto;
-}
-
 .button.active {
   background-color: #ccc;
   color: #fff;
@@ -55,4 +61,16 @@
 
 .button:hover {
   background-color: #ddd;
+}
+
+.tab-content {
+  width: 600px;
+}
+
+@media (max-width: 768px) {
+  .tab-content {
+    font-size: 14px;
+    padding: 10px;
+    width: 600px;
+  }
 }

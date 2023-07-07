@@ -35,7 +35,6 @@ export function MainTab() {
             >
             </button>
             <div className="button-text">{tab.label}</div>
-            {id < tabs.length - 1 && <div className="line"></div>}
           </div>
         ))}
       </div>
