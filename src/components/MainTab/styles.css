@@ -3,13 +3,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 3rem 0;
 }
 
 .button-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  /* Ajuste conforme necessário */
+  gap: 40px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button {
@@ -21,6 +28,24 @@
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s;
+  position: relative;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+.button-text {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.line {
+  width: 20px;
+  height: 1px;
+  background-color: #333;
+  margin: 0 auto;
 }
 
 .button.active {
@@ -31,7 +56,3 @@
 .button:hover {
   background-color: #ddd;
 }
-
-/* 
-.tab-content {
-} */

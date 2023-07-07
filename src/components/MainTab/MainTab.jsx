@@ -28,17 +28,17 @@ export function MainTab() {
     <div className="container">
       <div className="button-container">
         {tabs.map((tab, id) => (
-          <button
-            key={id}
-            className={`button ${id === activeTab ? 'active' : ''}`}
-            onClick={() => handleTabClick(id)}
-          >
-            {tab.label}
-          </button>
+          <div key={id} className="button-wrapper">
+            <button
+              className={`button ${id === activeTab ? 'active' : ''}`}
+              onClick={() => handleTabClick(id)}
+            >
+            </button>
+            <div className="button-text">{tab.label}</div>
+            {id < tabs.length - 1 && <div className="line"></div>}
+          </div>
         ))}
       </div>
-       
-      
       <div className="tab-content">
         {tabs[activeTab].component}
       </div>
