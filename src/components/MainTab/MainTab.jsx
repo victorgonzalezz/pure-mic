@@ -3,6 +3,7 @@ import { Estructura } from "../Estructura/Estructura";
 import { Constitucion } from "../Constitucion/Constitucion";
 
 import './styles.css'
+import { Sector } from "../Sector/Sector";
 
 export function MainTab() {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,6 +22,11 @@ export function MainTab() {
       label: 'Constitucion',
       id: 2,
       component: <Constitucion />,
+    },
+    {
+      label: 'Sector',
+      id: 2,
+      component: <Sector />,
     },
   ];
 
