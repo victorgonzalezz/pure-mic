@@ -13,6 +13,18 @@ body, input, textarea, button {
 .main-container {
   height: 100vh;
   background-color: white;
+}
 
+.default-header {
+  background-color: rgb(216, 210, 210);
+  height: 90px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.default-header h1 {
+  margin: 0 20px;
 
 }

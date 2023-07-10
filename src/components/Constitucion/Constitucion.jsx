@@ -1,5 +1,7 @@
 export function Constitucion() {
   return (
-    <h1>Tipo de Empresa</h1>
+    <header className="default-header">
+      <h1>Constitucion</h1>
+    </header> 
   )
 }

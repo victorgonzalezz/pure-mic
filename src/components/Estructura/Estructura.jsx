@@ -3,8 +3,8 @@ import './styles.css'
 export function Estructura() {
   return (
     <>
-      <header className="header">
-        <h1 className='header-estrutura'>Estructura</h1>
+      <header className="default-header">
+        <h1>Estructura</h1>
       </header>
       <div>
         <p>1. ¿Qué tipo de procedimento sigue su empresa?</p>
