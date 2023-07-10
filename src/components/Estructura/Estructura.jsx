@@ -1,6 +1,6 @@
 import './styles.css'
 
-export function Sector() {
+export function Estructura() {
   return (
     <>
       <header className="header">

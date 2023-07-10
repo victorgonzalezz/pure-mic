@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sector } from "../Sector/Sector";
+import { Estructura } from "../Estructura/Estructura";
 import { TipoDeEmpresa } from "../TipoDeEmpresa/TipoDeEmpresa";
 
 import './styles.css'
@@ -13,9 +13,9 @@ export function MainTab() {
 
   const tabs = [
     {
-      label: 'Sector',
+      label: 'Estructura',
       id: 1,
-      component: <Sector />,
+      component: <Estructura />,
     },
     {
       label: 'Tipo de empresa',
