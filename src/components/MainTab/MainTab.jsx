@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Estructura } from "../Estructura/Estructura";
 import { Constitucion } from "../Constitucion/Constitucion";
 
-import './styles.css'
 import { Sector } from "../Sector/Sector";
+import './styles.css'
 
 export function MainTab() {
   const [activeTab, setActiveTab] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  
+
 
   const handleTabClick = (event) => {
     setActiveTab(event);
@@ -16,7 +19,12 @@ export function MainTab() {
     {
       label: 'Estructura',
       id: 1,
-      component: <Estructura />,
+      component: (
+        <Estructura
+          selectedAnswer={selectedAnswer}
+          setSelectedAnswer={setSelectedAnswer}
+        />
+      ),
     },
     {
       label: 'Constitucion',
