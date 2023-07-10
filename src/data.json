@@ -1,0 +1,158 @@
+{
+  "tabs": [
+    {
+      "tab1": {
+        "title": "Estructura",
+        "content": [
+          {
+            "questionOne": "¿Qué tipo de procedimento sigue su empresa?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Apertura"
+              },
+              {
+                "id": "2",
+                "text": "Transformación"
+              } 
+            ]
+          },
+          {
+            "questionTwo": "¿La estructura jurídica de su empresa es unipersonal?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Sí"
+              },
+              {
+                "id": "2",
+                "text": "No"
+              } 
+            ]
+          },
+          {
+            "questionThree": "¿Qué tipo de actividades desarrollará su empresa?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Actividades industriales"
+              },
+              {
+                "id": "2",
+                "text": "Provedor de servicios"
+              }, 
+              {
+                "id": "3",
+                "text": "Otro"
+              } 
+            ]
+          },
+          {
+            "questionFour": "¿Desea utilizar el estado pro-forma que se rellenará automáticamente tras cumplimentar el formulario?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Sí"
+              },
+              {
+                "id": "2",
+                "text": "No"
+              } 
+            ]
+          },
+          {
+            "questionFive": "¿Entra su empresa en alguna de estas categorías?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Artrsanía"
+              },
+              {
+                "id": "2",
+                "text": "Industrial"
+              }, 
+              {
+                "id": "3",
+                "text": "Agroindustria"
+              },
+              {
+                "id": "4",
+                "text": "Agricultura"
+              }, 
+              {
+                "id": "5",
+                "text": "Silvicultura"
+              },
+              {
+                "id": "6",
+                "text": "Comercial y Servicios"
+              }, 
+              {
+                "id": "7",
+                "text": "Ninguna de las anteriores"
+              } 
+            ]
+          },
+          {
+            "questionSix": "¿Quál es el valor de su patrimonio?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Superior a 2.631.400.800 guaraníes"
+              },
+              {
+                "id": "2",
+                "text": "Menos de 2.631.400.800 guaraníes"
+              } 
+            ]
+          }
+        ]
+      },
+      
+      "tab2": {
+        "label": "Constitucion",
+        "content": [
+          {
+            "question": "¿Cuál tipo de negocio describe su empresa?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Buena"
+              },
+              {
+                "id": "2",
+                "text": "Muy Buena"
+              },
+              {
+                "id": "3",
+                "text": "Excelente"
+              }
+            ]
+          }
+        ]
+      },
+      "tab3": {
+        "label": "Espacio",
+        "content": [
+          {
+            "question": "¿Como te gustaria tener tu espacio?",
+            "answer": [
+              {
+                "id": "1",
+                "text": "Pequeño"
+              },
+              {
+                "id": "2",
+                "text": "Medio"
+              },
+              {
+                "id": "3",
+                "text": "Grande"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

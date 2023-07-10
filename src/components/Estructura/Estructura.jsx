@@ -7,7 +7,7 @@ export function Estructura() {
         <h1>Estructura</h1>
       </header>
       <div>
-        <p>1. ¿Qué tipo de procedimento sigue su empresa?</p>
+        <p className='default-paragrah'>1. ¿Qué tipo de procedimento sigue su empresa?</p>
       </div>
       <div>
         <div>

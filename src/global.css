@@ -26,5 +26,9 @@ body, input, textarea, button {
 
 .default-header h1 {
   margin: 0 20px;
+}
 
+.default-paragrah {
+  margin: 20px;
+  font-weight: 600;
 }
