@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Estructura } from "../Estructura/Estructura";
-import { TipoDeEmpresa } from "../TipoDeEmpresa/TipoDeEmpresa";
+import { Constitucion } from "../Constitucion/Constitucion";
 
 import './styles.css'
 
@@ -18,9 +18,9 @@ export function MainTab() {
       component: <Estructura />,
     },
     {
-      label: 'Tipo de empresa',
+      label: 'Constitucion',
       id: 2,
-      component: <TipoDeEmpresa />,
+      component: <Constitucion />,
     },
   ];
 
