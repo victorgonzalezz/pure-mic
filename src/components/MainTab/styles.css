@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+.button-wrapper:last-child .button::before {
+  display: none;
+}
+
 .button {
   position: relative;
 
