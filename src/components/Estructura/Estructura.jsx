@@ -3,10 +3,11 @@ import './styles.css'
 
 import data from '../../data.json'
 import { FirstQuestion } from './FirstQuestion'
+import { SecondQuestion } from './SecondQuestion'
 // import { useState } from 'react'
 
 // eslint-disable-next-line react/prop-types
-export function Estructura({ selectedAnswer, setSelectedAnswer }) {
+export function Estructura({ selectedAnswer, setSelectedAnswer, selectedAnswerSecondQuestion, setSelectedAnswerSecondQuestion }) {
   // const [selectedAnswer, setSelectedAnswer] = useState('')
   const title = data.tabs[0].tab1.title
   
@@ -20,7 +21,12 @@ export function Estructura({ selectedAnswer, setSelectedAnswer }) {
       <FirstQuestion
         selectedAnswer={selectedAnswer}
         setSelectedAnswer={setSelectedAnswer}
-         />
+      />
+      <SecondQuestion
+        selectedAnswerSecondQuestion={selectedAnswerSecondQuestion}
+        setSelectedAnswerSecondQuestion={setSelectedAnswerSecondQuestion}
+      />
+    
     </>
   )
 }

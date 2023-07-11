@@ -5,7 +5,9 @@
         "title": "Estructura",
         "content": [
           {
-            "questionOne": "¿Qué tipo de procedimento sigue su empresa?",
+            "question": "¿Qué tipo de procedimento sigue su empresa?",
+            "id":"1",
+            "type":"radio",
             "answer": [
               {
                 "id": "1",
@@ -18,7 +20,9 @@
             ]
           },
           {
-            "questionTwo": "¿La estructura jurídica de su empresa es unipersonal?",
+            "question": "¿La estructura jurídica de su empresa es unipersonal?",
+            "id": "2",
+            "type": "checkbox",
             "answer": [
               {
                 "id": "1",
@@ -31,7 +35,9 @@
             ]
           },
           {
-            "questionThree": "¿Qué tipo de actividades desarrollará su empresa?",
+            "question": "¿Qué tipo de actividades desarrollará su empresa?",
+            "id": "3",
+            "type": "radio",
             "answer": [
               {
                 "id": "1",
@@ -48,7 +54,9 @@
             ]
           },
           {
-            "questionFour": "¿Desea utilizar el estado pro-forma que se rellenará automáticamente tras cumplimentar el formulario?",
+            "question": "¿Desea utilizar el estado pro-forma que se rellenará automáticamente tras cumplimentar el formulario?",
+            "id": "4",
+            "type": "radio",
             "answer": [
               {
                 "id": "1",
@@ -61,7 +69,9 @@
             ]
           },
           {
-            "questionFive": "¿Entra su empresa en alguna de estas categorías?",
+            "question": "¿Entra su empresa en alguna de estas categorías?",
+            "id": "5",
+            "type": "checkbox",
             "answer": [
               {
                 "id": "1",
@@ -94,7 +104,9 @@
             ]
           },
           {
-            "questionSix": "¿Quál es el valor de su patrimonio?",
+            "question": "¿Quál es el valor de su patrimonio?",
+            "id": "6",
+            "type": "radio",
             "answer": [
               {
                 "id": "1",
