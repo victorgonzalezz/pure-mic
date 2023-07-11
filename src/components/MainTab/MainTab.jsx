@@ -3,11 +3,14 @@ import { Estructura } from "../Estructura/Estructura";
 import { Constitucion } from "../Constitucion/Constitucion";
 
 import { Sector } from "../Sector/Sector";
+// import data from '../../data.json'
 import './styles.css'
+
 
 export function MainTab() {
   const [activeTab, setActiveTab] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('')
+
 
   const handleTabClick = (event) => {
     setActiveTab(event);
@@ -19,6 +22,7 @@ export function MainTab() {
       id: 1,
       component: (
         <Estructura
+    
           selectedAnswer={selectedAnswer}
           setSelectedAnswer={setSelectedAnswer}
         />
