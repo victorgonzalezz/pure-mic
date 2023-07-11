@@ -9,8 +9,6 @@ export function MainTab() {
   const [activeTab, setActiveTab] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('')
 
-  
-
   const handleTabClick = (event) => {
     setActiveTab(event);
   };
