@@ -3,17 +3,41 @@ import { Estructura } from "../Estructura/Estructura";
 import { Constitucion } from "../Constitucion/Constitucion";
 
 import { Sector } from "../Sector/Sector";
-// import data from '../../data.json'
+import data from '../../data.json'
 import './styles.css'
+
+const initialSelectedAnswer = data.tabs[0].content.reduce((acc, question) => {
+  return { ...acc, [question.id]: [] };
+}, {});
+ //lógica para retirar um Warning do Input
+
 
 
 export function MainTab() {
   const [activeTab, setActiveTab] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState('')
+  const [selectedAnswer, setSelectedAnswer] = useState(initialSelectedAnswer)
 
 
   const handleTabClick = (event) => {
     setActiveTab(event);
+  };
+
+  const handleAnswerChange = (questionId, answerId) => {
+    setSelectedAnswer((prevSelectedAnswers) => {
+      const selectedAnswerIds = prevSelectedAnswers[questionId] || [];
+
+      if (selectedAnswerIds.includes(answerId)) {
+        return {
+          ...prevSelectedAnswers,
+          [questionId]: selectedAnswerIds.filter((id) => id !== answerId),
+        };
+      } else {
+        return {
+          ...prevSelectedAnswers,
+          [questionId]: [...selectedAnswerIds, answerId],
+        };
+      }
+    });
   };
 
   const tabs = [
@@ -24,7 +48,7 @@ export function MainTab() {
         <Estructura
     
           selectedAnswer={selectedAnswer}
-          setSelectedAnswer={setSelectedAnswer}
+          onChangeAnswer={handleAnswerChange}
         />
       ),
     },
@@ -35,7 +59,7 @@ export function MainTab() {
     },
     {
       label: 'Sector',
-      id: 2,
+      id: 3,
       component: <Sector />,
     },
   ];
@@ -46,6 +70,7 @@ export function MainTab() {
         {tabs.map((tab, id) => (
           <div key={id} className="button-wrapper">
             <button
+              type="button"
               className={`button ${id === activeTab ? 'active' : ''}`}
               onClick={() => handleTabClick(id)}
             >

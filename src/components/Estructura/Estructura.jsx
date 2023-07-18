@@ -1,22 +1,11 @@
-import './styles.css'
-import data from '../../data.json'
-import { useState } from 'react'
+import './styles.css';
+import data from '../../data.json';
 
-export function Estructura() {
-  const [selectedAnswer, setSelectedAnswer] = useState('')
-  const [selectedAnswerSecondQuestion, setSelectedAnswerSecondQuestion] = useState('')
-
-  const dataTabs = data.tabs
-  const dataTitle = dataTabs[0].title
-  const dataQuestions = dataTabs[0].content
-
-  const handleRadioChange = (event) => {
-    setSelectedAnswer(event.target.value)
-  }
-
-  const handleCheckboxChange = (event) => {
-    setSelectedAnswerSecondQuestion(event.target.value)
-  }
+// eslint-disable-next-line react/prop-types
+export function Estructura({ selectedAnswer, onChangeAnswer }) {
+  const dataTabs = data.tabs;
+  const dataTitle = dataTabs[0].title;
+  const dataQuestions = dataTabs[0].content;
 
   return (
     <>
@@ -38,8 +27,8 @@ export function Estructura() {
                       id={answer.id}
                       name={question.id}
                       value={answer.text}
-                      checked={selectedAnswer === answer.text}
-                      onChange={handleRadioChange}
+                      checked={selectedAnswer[question.id]?.includes(answer.id)}
+                      onChange={() => onChangeAnswer(question.id, answer.id)}
                     />
                     <label htmlFor={answer.id}>{answer.text}</label>
                   </div>
@@ -50,8 +39,8 @@ export function Estructura() {
                       id={answer.id}
                       name={question.id}
                       value={answer.text}
-                      checked={selectedAnswerSecondQuestion === answer.text}
-                      onChange={handleCheckboxChange}
+                        checked={selectedAnswer[question.id]?.includes(answer.id)}
+                      onChange={() => onChangeAnswer(question.id, answer.id)}
                     />
                     <label htmlFor={answer.id}>{answer.text}</label>
                   </div>
@@ -62,5 +51,5 @@ export function Estructura() {
         </div>
       ))}
     </>
-  )
+  );
 }
