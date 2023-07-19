@@ -12,10 +12,10 @@ export function Estructura({ selectedAnswer, onChangeAnswer }) {
       <header className="default-header">
         <h1>{dataTitle}</h1>
       </header>
-      {dataQuestions.map((question) => (
+      {dataQuestions.map((question, index) => (
         <div key={question.id}>
           <div>
-            <legend>{question.question}</legend>
+            <legend>{`${index + 1}. ${question.question}`}</legend>
           </div>
           <div>
             {question.answer.map((answer) => (

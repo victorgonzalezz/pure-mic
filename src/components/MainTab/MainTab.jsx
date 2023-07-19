@@ -40,6 +40,12 @@ export function MainTab() {
     });
   };
 
+
+  
+  console.log(handleAnswerChange, 'oi')
+
+  
+  
   const tabs = [
     {
       label: 'Estructura',
