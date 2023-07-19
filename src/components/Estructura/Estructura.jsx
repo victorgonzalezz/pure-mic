@@ -5,17 +5,17 @@ import data from '../../data.json';
 export function Estructura({ selectedAnswer, onChangeAnswer }) {
   const dataTabs = data.tabs;
   const dataTitle = dataTabs[0].title;
-  const dataQuestions = dataTabs[0].content;
+  const dataQuestions = dataTabs[0].question;
 
   return (
     <>
       <header className="default-header">
         <h1>{dataTitle}</h1>
       </header>
-      {dataQuestions.map((question, index) => (
+      {dataQuestions.map((question) => (
         <div key={question.id}>
           <div>
-            <legend>{`${index + 1}. ${question.question}`}</legend>
+            <legend>{question.question}</legend>
           </div>
           <div>
             {question.answer.map((answer) => (

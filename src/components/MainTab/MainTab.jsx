@@ -6,7 +6,7 @@ import { Sector } from "../Sector/Sector";
 import data from '../../data.json'
 import './styles.css'
 
-const initialSelectedAnswer = data.tabs[0].content.reduce((acc, question) => {
+const initialSelectedAnswer = data.tabs[0].question.reduce((acc, question) => {
   return { ...acc, [question.id]: [] };
 }, {});
  //lógica para retirar um Warning do Input
