@@ -46,7 +46,6 @@ export function MainTab() {
       id: 1,
       component: (
         <Estructura
-    
           selectedAnswer={selectedAnswer}
           onChangeAnswer={handleAnswerChange}
         />

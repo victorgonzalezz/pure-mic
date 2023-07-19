@@ -28,6 +28,8 @@ export function Estructura({ selectedAnswer, onChangeAnswer }) {
                       name={question.id}
                       value={answer.text}
                       checked={selectedAnswer[question.id]?.includes(answer.id)}
+                      //preciso entender melhor o que está a ocorrer dentro do checked
+                      //Sobre o ? Verificar final do arquivo.
                       onChange={() => onChangeAnswer(question.id, answer.id)}
                     />
                     <label htmlFor={answer.id}>{answer.text}</label>
@@ -53,3 +55,8 @@ export function Estructura({ selectedAnswer, onChangeAnswer }) {
     </>
   );
 }
+//o operador de coalescência nula (?.) é uma forma de verificação de nulidade ou
+// indefinição de um valor antes de acessar uma propriedade ou chamar um método.
+
+//Ele pode ser usado para evitar erros de exceção quando tentamos acessar
+// propriedades ou métodos em valores que podem ser null ou undefined.
