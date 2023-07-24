@@ -1,13 +1,15 @@
 {
   "tabs": [
     {
+      "id": 1,
       "title": "Estructura",
-      "question": [
+      "label": "Estructura",
+      "questions": [
         {
-          "question": "¿Qué tipo de procedimento sigue su empresa?",
+          "title": "¿Qué tipo de procedimento sigue su empresa?",
           "id": "1",
           "type": "radio",
-          "answer": [
+          "items": [
             {
               "id": "1.1",
               "text": "Apertura"
@@ -19,10 +21,10 @@
           ]
         },
         {
-          "question": "¿La estructura jurídica de su empresa es unipersonal?",
+          "title": "¿La estructura jurídica de su empresa es unipersonal?",
           "id": "2",
           "type": "checkbox",
-          "answer": [
+          "items": [
             {
               "id": "2.1",
               "text": "Sí"
@@ -34,10 +36,10 @@
           ]
         },
         {
-          "question": "¿Qué tipo de actividades desarrollará su empresa?",
+          "title": "¿Qué tipo de actividades desarrollará su empresa?",
           "id": "3",
           "type": "radio",
-          "answer": [
+          "items": [
             {
               "id": "3.1",
               "text": "Actividades industriales"
@@ -53,10 +55,10 @@
           ]
         },
         {
-          "question": "¿Desea utilizar el estado pro-forma que se rellenará automáticamente tras cumplimentar el formulario?",
+          "title": "¿Desea utilizar el estado pro-forma que se rellenará automáticamente tras cumplimentar el formulario?",
           "id": "4",
           "type": "radio",
-          "answer": [
+          "items": [
             {
               "id": "4.1",
               "text": "Sí"
@@ -68,10 +70,10 @@
           ]
         },
         {
-          "question": "¿Entra su empresa en alguna de estas categorías?",
+          "title": "¿Entra su empresa en alguna de estas categorías?",
           "id": "5",
           "type": "checkbox",
-          "answer": [
+          "items": [
             {
               "id": "5.1",
               "text": "Artrsanía"
@@ -103,10 +105,10 @@
           ]
         },
         {
-          "question": "¿Quál es el valor de su patrimonio?",
+          "title": "¿Quál es el valor de su patrimonio?",
           "id": "6",
           "type": "radio",
-          "answer": [
+          "items": [
             {
               "id": "6.1",
               "text": "Superior a 2.631.400.800 guaraníes"
@@ -120,21 +122,24 @@
       ]
     },
     {
+      "id": 2,
       "title": "Constitucion",
-      "question": [
+      "label": "Constitucion",
+      "questions": [
         {
-          "question": "¿Cuál tipo de negocio describe su empresa?",
-          "answer": [
+          "title": "¿Cuál tipo de negocio describe su empresa?",
+          "id": "7",
+          "items": [
             {
-              "id": "7",
+              "id": "7.1",
               "text": "Buena"
             },
             {
-              "id": "8",
+              "id": "7.2",
               "text": "Muy Buena"
             },
             {
-              "id": "9",
+              "id": "7.3",
               "text": "Excelente"
             }
           ]
@@ -142,11 +147,13 @@
       ]
     },
     {
+      "id": 3,
+      "title": "Espacio",
       "label": "Espacio",
-      "question": [
+      "questions": [
         {
-          "question": "¿Como te gustaria tener tu espacio?",
-          "answer": [
+          "title": "¿Como te gustaria tener tu espacio?",
+          "items": [
             {
               "id": "10",
               "text": "Pequeño"

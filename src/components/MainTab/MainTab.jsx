@@ -1,39 +1,54 @@
 import { useState } from "react";
-import { Estructura } from "../Estructura/Estructura";
-import { Constitucion } from "../Constitucion/Constitucion";
+import { tabs } from '../../data.json';
+//import { Estructura } from "../Estructura/Estructura";
+//import { Constitucion } from "../Constitucion/Constitucion";
 
-import { Sector } from "../Sector/Sector";
-import data from '../../data.json'
+//import { Sector } from "../Sector/Sector";
+// import data from '../../data.json'
 import './styles.css'
 
-const initialSelectedAnswer = data.tabs[0].question.reduce((acc, question) => {
-  return { ...acc, [question.id]: [] };
-}, {});
- //lógica para retirar um Warning do Input
+// const initialSelectedAnswer = data.tabs[0].question.reduce((acc, question) => {
+//   return { ...acc, [question.id]: [] };
+// }, {});
+//lógica para retirar um Warning do Input
 
 
 
 export function MainTab() {
   const [activeTab, setActiveTab] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(initialSelectedAnswer)
+  const [selectedAnswer, setSelectedAnswer] = useState({})
 
 
   const handleTabClick = (event) => {
     setActiveTab(event);
   };
 
+
+  /*
+  const a
+  [
+    { "1": "1.2"},
+    { "2": ["2.1", 2.2"] },
+
+
+    { "5": ["5.2", "5.4"] },
+  ]
+
+
+
+  */
   const handleAnswerChange = (questionId, answerId) => {
-    setSelectedAnswer((prevSelectedAnswers) => {
-      const selectedAnswerIds = prevSelectedAnswers[questionId] || [];
+    setSelectedAnswer((prevSelecteditems) => {
+      const selectedAnswerIds = prevSelecteditems[questionId] || [];
 
       if (selectedAnswerIds.includes(answerId)) {
         return {
-          ...prevSelectedAnswers,
+          ...prevSelecteditems,
           [questionId]: selectedAnswerIds.filter((id) => id !== answerId),
         };
       } else {
         return {
-          ...prevSelectedAnswers,
+          ...prevSelecteditems,
           [questionId]: [...selectedAnswerIds, answerId],
         };
       }
@@ -41,12 +56,12 @@ export function MainTab() {
   };
 
 
-  
+
   console.log(handleAnswerChange, 'oi')
 
-  
-  
-  const tabs = [
+
+
+  const tabsx = [
     {
       label: 'Estructura',
       id: 1,
@@ -85,7 +100,8 @@ export function MainTab() {
         ))}
       </div>
       <div className="tab-content">
-        {tabs[activeTab].component}
+        {Tab({ tabs[activeTab],  selectedAnswer, onChangeAnswer})}
+
       </div>
     </div>
   );
