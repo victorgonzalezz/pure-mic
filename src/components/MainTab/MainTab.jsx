@@ -100,7 +100,7 @@ export function MainTab() {
         ))}
       </div>
       <div className="tab-content">
-        {Tab({ tabs[activeTab],  selectedAnswer, onChangeAnswer})}
+        {Tab({ tabs[activeTab]: selectedAnswer, onChangeAnswer })}
 
       </div>
     </div>

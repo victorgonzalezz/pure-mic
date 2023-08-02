@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './styles.css';
 
 const Option = (props) => {
@@ -7,7 +8,7 @@ const Option = (props) => {
   const { id, text } = item;
 
   const hasId = (obj, key) => Object.keys(obj).pop() === key;  // [ "1" ]
-  
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const answer = type === 'checkbox' ? checked : value;
@@ -27,12 +28,12 @@ const Option = (props) => {
       { "3": ["3.2", "3.4"] }
     ]
     */
-    
-    
+
+
     // Comentários supondo ID = 2
     // seleciolar a resposta da questão corrente     { "2": ["2.1", 2.2"] }
     const answersCurrentQuestion = allAnswers.filter((answer) => hasId(answer, qid)); // ??
-      
+
     if (type === 'radio') {
       // Suponso id = "1", trantando a resposta da questão para radio { "1": "1.2"} ou { "1": ""} ou {"1", ""}com string na resposta
       answersCurrentQuestion[id] = answer ? id : '';
@@ -43,7 +44,7 @@ const Option = (props) => {
       if (answer)
         answers = [...answers, id]; // allAnswers = othersAnswers + currentAnswer (id) "2.4"  =>  ["2.1", 2.2", "2.4"]
       //answers.push(id);
-      
+
       answersCurrentQuestion[id] = answers;  // { "2" : ["2.1", 2.2", "2.4"] }
     }
 
